@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use Illuminate\Support\Facades\DB;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -34,6 +33,6 @@ class DatabaseSeeder extends Seeder
             DB::table('civilizations')->insert([
                 ['id'=>$id,'name'=>$name,'expansion'=>$expansion,'army_type'=>$army_type,'team_bonus'=>$team_bonus,'civilization_bonus'=>$civilization_bonus]
             ]);
-        }
     }
+}
 }
