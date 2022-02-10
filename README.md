@@ -18,7 +18,7 @@
 - Click `Get Civilizations` to fill the table with data from the database
 - Double click on cells to edit them. When finished editing, just click out of the cells to trigger the update. ***Do not*** hit enter - there's a bug in MaterialUI that causes issues.
 - Click on the red trash can icon to remove a result from the database.
-- If you delete/modify records and want to return the data to its original state, you'll need to run `php artisan migrate:fresh` and then `php artisan serve`.
+- If you delete/modify records and want to return the data to its original state, you'll need to run `php artisan migrate:refresh` and then `php artisan serve`.
 
 All actions should result in an instanteous page update, while also persisting the changes. You can refresh the page and/or click `Get Civilizations` again to verify persistence.
 
