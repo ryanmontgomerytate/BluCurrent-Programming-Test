@@ -32,19 +32,12 @@ export const deleteCivilizationsData = async (id: string) => {
 // make function to update civ data
 // contact PHP endpoint on backend
 // function take one Civilization object as an argument
-export const updateCivilizationsData = async (): Promise<Civilization[]> => {
-  const apiUrl = '/api/civilizations'
-  let civilizations: Civilization[] = []
-
+export const updateCivilizationsData = async (civilization: Civilization) => {
+  const apiUrl = `/api/civilizations/${civilization.id}`
+  console.log({civilization})
   try {
-    const response = await fetch(apiUrl)
-    const json = await response.json()
-    civilizations = (json as any).map((civ) =>
-      Object.assign(new Civilization(), civ),
-    )
+    await fetch(apiUrl, { method: 'PUT', body: JSON.stringify(civilization) })
   } catch (error) {
     console.log('error', error)
   }
-
-  return civilizations
 }

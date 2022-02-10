@@ -1,3 +1,4 @@
+import { Button } from '@mui/material'
 import React, { useState } from 'react'
 import { fetchCivilizationsData } from '../fetch/fetchCivilizationsData'
 import { Civilization } from '../types/civilizations'
@@ -12,7 +13,9 @@ export const Display: React.FC = () => {
 
   return (
     <div>
-      <button onClick={callFetch}>Get Civilizations</button>
+      <Button variant="contained" size="large" onClick={callFetch}>
+        Get Civilizations
+      </Button>
       {civData && <Table civData={civData} setCivData={setCivData} />}
     </div>
   )
