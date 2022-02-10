@@ -1,5 +1,8 @@
 # BluCurrent Programming Project
 
+# Project Backlog
+- See Trello Board: https://trello.com/b/VYNs6ATW/blucurrent-programming-project
+
 # Setup instructions
 1. Clone this repository
 2. Start MySQL Server locally (should be on port 127.0.0.1)
