@@ -3,7 +3,7 @@
 # Project Backlog
 - See Trello Board: https://trello.com/b/VYNs6ATW/blucurrent-programming-project
 
-# Setup instructions
+# Setup Instructions
 1. Clone this repository
 2. Start MySQL Server locally (should be on port 127.0.0.1)
 3. This project assumes your db user has a name of "root" and a password of "" (no password). If this is not the case, you will need to edit the `.env` file to match your db credentials.
@@ -20,3 +20,7 @@
 - Click on the red trash can icon to remove a result from the database.
 
 All actions should result in an instanteous page update, while also persisting the changes. You can refresh the page and/or click `Get Civilizations` again to verify persistence.
+
+# System Architecture Diagram
+
+![Image of diagram](./resources/assets/Programming-Test-Diagram.drawio.png)
