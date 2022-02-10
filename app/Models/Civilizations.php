@@ -9,7 +9,7 @@ class Civilizations extends Model
 {
     use HasFactory;
 
-    protected $display = [
+    protected $civilization = [
         'id',
         'name',
         'expansion',
