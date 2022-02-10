@@ -9,6 +9,8 @@
 
  You should be able to view the app in `127.0.0.1:8000` in the browser.
 
+ ![Image of app](./resources/assets/project-home.png)
+
  # App Usage
 - Click `Get Civilizations` to fill the table with data from the database
 - Double click on cells to edit them. When finished editing, just click out of the cells to trigger the update. ***Do not*** hit enter - there's a bug in MaterialUI that causes issues.
