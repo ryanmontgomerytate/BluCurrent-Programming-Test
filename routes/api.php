@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CivilizationController;
+use App\Models\Civilizations;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/civilizations', [CivilizationController::class, 'getCivilizations']);
+
+// Route::delete('/civilizations/{id}', function ($id) {
+//     return new CivilizationController(civilizations::findOrFail($id));
+// });
+
+Route::delete('/civilizations/{id}',[CivilizationController::class, 'deleteCivilizations']);

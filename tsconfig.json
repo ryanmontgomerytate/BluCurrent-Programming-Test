@@ -10,5 +10,5 @@
     "allowJs": true,
     "skipLibCheck": true,
   },
-  "include": ["resources/ts/**/*", "resources/js/react-app.tsx"]
+  "include": ["resources/ts/**/*", "resources/app/app.tsx"]
 }
