@@ -23,4 +23,4 @@ All actions should result in an instanteous page update, while also persisting t
 
 # System Architecture Diagram
 
-![Image of diagram](./resources/assets/Programming-Test-Diagram.drawio.png)
+![Image of diagram](./resources/assets/Programming-Test-Diagram.png)
