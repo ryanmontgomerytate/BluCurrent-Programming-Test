@@ -57,8 +57,9 @@ export const Table: React.FC<Props> = ({ civData, setCivData }) => {
       editable: true,
     },
     {
-      field: 'civilization_bonus_0',
+      field: 'civilization_bonus',
       headerName: 'Civilization Bonus',
+      type: 'array',
       width: 180,
       editable: true,
     },
