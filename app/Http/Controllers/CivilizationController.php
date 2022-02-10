@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Civilizations;
+use Illuminate\Http\Request;
 
 class CivilizationController extends Controller
 {
@@ -13,5 +14,10 @@ class CivilizationController extends Controller
     public function deleteCivilizations($id){
         $civilization = Civilizations::find($id);
         $civilization->delete();
+    }
+
+    public function update(Request $request, $id){
+  Civilizations::whereId($id)->update($request->json()->all());
+
     }
 }

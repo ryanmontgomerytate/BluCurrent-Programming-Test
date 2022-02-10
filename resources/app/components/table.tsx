@@ -9,8 +9,10 @@ import CancelIcon from '@mui/icons-material/Close'
 import { Civilization } from '../types/civilizations'
 import { DataGrid, GridActionsCellItem, useGridApiRef } from '@mui/x-data-grid'
 import { Alert } from '@mui/material'
-import { DataGridPro } from '@mui/x-data-grid-pro'
-import { deleteCivilizationsData } from '../fetch/fetchCivilizationsData'
+import {
+  deleteCivilizationsData,
+  updateCivilizationsData,
+} from '../fetch/fetchCivilizationsData'
 
 interface Props {
   civData: Civilization[]
@@ -24,8 +26,18 @@ export const Table: React.FC<Props> = ({ civData, setCivData }) => {
   }
 
   const columns = [
-    { field: 'id', headerName: 'ID', type: 'number', editable: false },
-    { field: 'name', headerName: 'Name', width: 180, editable: true },
+    {
+      field: 'id',
+      headerName: 'ID',
+      type: 'number',
+      editable: false,
+    },
+    {
+      field: 'name',
+      headerName: 'Name',
+      width: 180,
+      editable: true,
+    },
     {
       field: 'expansion',
       headerName: 'Expansion',
@@ -72,6 +84,8 @@ export const Table: React.FC<Props> = ({ civData, setCivData }) => {
 
   const handleEditRowsModelChange = React.useCallback((model) => {
     setEditRowsModel(model)
+    //console.log(JSON.stringify(editRowsModel))
+    // console.log(JSON.stringify(model))
   }, [])
 
   return (
@@ -82,6 +96,7 @@ export const Table: React.FC<Props> = ({ civData, setCivData }) => {
           columns={columns}
           editRowsModel={editRowsModel}
           editMode="row"
+          onRowEditStop={(thing) => updateCivilizationsData(thing.row as Civilization)}
           onEditRowsModelChange={handleEditRowsModelChange}
         />
       </div>
