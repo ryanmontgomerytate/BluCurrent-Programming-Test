@@ -34,7 +34,6 @@ export const deleteCivilizationsData = async (id: string) => {
 // function take one Civilization object as an argument
 export const updateCivilizationsData = async (civilization: Civilization) => {
   const apiUrl = `/api/civilizations/${civilization.id}`
-  console.log({civilization})
   try {
     await fetch(apiUrl, { method: 'PUT', body: JSON.stringify(civilization) })
   } catch (error) {
