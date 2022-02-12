@@ -1,4 +1,4 @@
-# Laravel BluCurrent Programming Project
+# Laravel React CRUD App
 
 # Project Backlog
 - See Trello Board: https://trello.com/b/VYNs6ATW/blucurrent-programming-project
